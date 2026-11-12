@@ -1,0 +1,161 @@
+
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>تصفیه آب سادات | فروشگاه تخصصی</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:Tahoma,Arial,sans-serif;background:#f4f8fb;color:#183047}
+header{background:linear-gradient(120deg,#063b65,#087eae);color:white;padding:22px 6%}
+.top{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:15px}
+.logo{font-size:25px;font-weight:bold}
+header p{margin:12px 0 0;color:#d8efff}
+nav{background:white;padding:15px 6%;display:flex;gap:25px;flex-wrap:wrap;box-shadow:0 2px 12px #0001}
+nav a{text-decoration:none;color:#145477;font-weight:bold}
+.hero{margin:25px auto;width:90%;padding:55px 30px;border-radius:20px;background:linear-gradient(120deg,#087eae,#13b5c8);color:white}
+.hero h1{font-size:30px}
+.hero p{line-height:2}
+.btn{display:inline-block;background:#ffbd43;color:#17344b;padding:13px 22px;border-radius:10px;text-decoration:none;font-weight:bold;border:0;cursor:pointer}
+.container{width:90%;margin:35px auto}
+h2{color:#07547c}
+.search{width:100%;padding:15px;border:1px solid #d4e2eb;border-radius:10px;font-size:15px;margin:10px 0 20px}
+.products{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
+.product{background:white;padding:20px;border-radius:16px;box-shadow:0 5px 20px #153d5510;text-align:center}
+.product .pic{font-size:65px;background:#eaf7fc;border-radius:13px;padding:20px}
+.product h3{color:#07547c}
+.price{font-weight:bold;color:#079b83;font-size:18px}
+.product button{background:#087eae;color:white;border:0;padding:12px 18px;border-radius:9px;cursor:pointer}
+.info{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+.info div{background:white;padding:23px;border-radius:14px;line-height:2}
+.contact{background:#e3f5fb;padding:30px;border-radius:17px;line-height:2}
+footer{text-align:center;background:#063b65;color:white;padding:25px;margin-top:40px;line-height:2}
+.cart{position:fixed;bottom:18px;left:18px;background:#087eae;color:white;border-radius:50px;padding:15px 22px;box-shadow:0 5px 20px #0003;cursor:pointer;border:0}
+#cartDetails{display:none;background:white;padding:20px;border-radius:15px;margin-top:20px;box-shadow:0 3px 15px #0002}
+@media(max-width:600px){.hero h1{font-size:23px}.logo{font-size:21px}}
+</style>
+</head>
+<body>
+
+<header>
+<div class="top">
+<div class="logo">💧 تصفیه آب سادات</div>
+<div>کیفیت آب، سلامت خانواده</div>
+</div>
+<p>فروش دستگاه تصفیه آب، فیلتر و قطعات یدکی همراه با خدمات تعمیرات در منزل</p>
+</header>
+
+<nav>
+<a href="#">صفحه اصلی</a>
+<a href="#products">محصولات</a>
+<a href="#services">خدمات ما</a>
+<a href="#contact">تماس با ما</a>
+</nav>
+
+<section class="hero">
+<h1>به فروشگاه تصفیه آب سادات خوش آمدید</h1>
+<p>خرید انواع دستگاه تصفیه آب خانگی، فیلترهای باکیفیت و قطعات یدکی با امکان ثبت سفارش و دریافت خدمات تعمیرات در منزل.</p>
+<a class="btn" href="#products">مشاهده محصولات</a>
+</section>
+
+<section class="container" id="products">
+<h2>🛍️ محصولات فروشگاه</h2>
+<input class="search" id="search" placeholder="جست‌وجوی محصول..." oninput="searchProducts()">
+
+<div class="products" id="productList">
+
+<div class="product" data-name="دستگاه تصفیه آب خانگی">
+<div class="pic">🚰</div>
+<h3>دستگاه تصفیه آب خانگی</h3>
+<p>مناسب استفاده روزانه خانواده</p>
+<p class="price">استعلام قیمت</p>
+<button onclick="addCart('دستگاه تصفیه آب خانگی')">افزودن به سبد خرید</button>
+</div>
+
+<div class="product" data-name="فیلتر تصفیه آب">
+<div class="pic">💧</div>
+<h3>فیلتر تصفیه آب</h3>
+<p>انواع فیلترهای دستگاه تصفیه آب</p>
+<p class="price">استعلام قیمت</p>
+<button onclick="addCart('فیلتر تصفیه آب')">افزودن به سبد خرید</button>
+</div>
+
+<div class="product" data-name="مخزن تصفیه آب">
+<div class="pic">🛢️</div>
+<h3>مخزن تصفیه آب</h3>
+<p>انواع مخزن دستگاه تصفیه آب</p>
+<p class="price">استعلام قیمت</p>
+<button onclick="addCart('مخزن تصفیه آب')">افزودن به سبد خرید</button>
+</div>
+
+<div class="product" data-name="قطعات یدکی">
+<div class="pic">⚙️</div>
+<h3>قطعات یدکی</h3>
+<p>قطعات و لوازم جانبی دستگاه</p>
+<p class="price">استعلام قیمت</p>
+<button onclick="addCart('قطعات یدکی')">افزودن به سبد خرید</button>
+</div>
+
+</div>
+
+<div id="cartDetails">
+<h3>🛒 سبد خرید شما</h3>
+<ul id="cartItems"></ul>
+<button class="btn" onclick="order()">ثبت سفارش در واتساپ</button>
+</div>
+</section>
+
+<section class="container" id="services">
+<h2>خدمات ما</h2>
+<div class="info">
+<div>🔧 <b>تعمیرات در منزل</b><br>ارائه خدمات تعمیر دستگاه تصفیه آب</div>
+<div>💧 <b>تعویض فیلتر</b><br>سرویس و تعویض فیلترهای دستگاه</div>
+<div>📦 <b>فروش قطعات</b><br>تأمین قطعات و لوازم جانبی</div>
+</div>
+</section>
+
+<section class="container" id="contact">
+<div class="contact">
+<h2>📞 ارتباط با تصفیه آب سادات</h2>
+<p>برای اطلاع از قیمت محصولات و ثبت سفارش با ما تماس بگیرید.</p>
+<p>شماره تماس: 09192956318</p>
+<a class="btn" href="tel:09192956318">تماس تلفنی</a>
+<a class="btn" href="https://wa.me/989192956318">واتساپ</a>
+</div>
+</section>
+
+<footer>
+<strong>تصفیه آب سادات</strong>
+<p>همراه شما برای داشتن آبی سالم و گوارا 💧</p>
+تمام حقوق محفوظ است.
+</footer>
+
+<button class="cart" onclick="toggleCart()">🛒 سبد خرید (<span id="count">0</span>)</button>
+
+<script>
+let cart=[];
+function addCart(name){
+cart.push(name);
+document.getElementById('count').textContent=cart.length;
+alert('محصول به سبد خرید اضافه شد');
+}
+function toggleCart(){
+let box=document.getElementById('cartDetails');
+box.style.display=box.style.display==='block'?'none':'block';
+document.getElementById('cartItems').innerHTML=cart.map(x=>'<li>'+x+'</li>').join('');
+}
+function order(){
+if(!cart.length){alert('سبد خرید خالی است');return;}
+let message='سلام، برای سفارش این محصولات راهنمایی می‌خواهم:\n'+cart.join('\n');
+window.open('https://wa.me/989192956318?text='+encodeURIComponent(message),'_blank');
+}
+function searchProducts(){
+let q=document.getElementById('search').value.trim();
+document.querySelectorAll('.product').forEach(p=>{
+p.style.display=p.dataset.name.includes(q)?'block':'none';
+});
+}
+</script>
+</body>
+</html>
