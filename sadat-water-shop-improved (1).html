@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#073b63">
+<meta name="description" content="فروشگاه تصفیه آب سادات؛ فروش دستگاه تصفیه آب، فیلتر و قطعات یدکی همراه با خدمات تعمیرات در منزل.">
+<title>تصفیه آب سادات | فروشگاه تخصصی</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#073b63;--blue:#087eae;--cyan:#16b7c9;--ink:#183047;--muted:#627789;--paper:#f4f9fc;--white:#fff;--gold:#ffc24b;--green:#079b83;--line:#e2edf3;--shadow:0 14px 38px rgba(12,62,91,.09)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{margin:0;font-family:"Vazirmatn",Tahoma,sans-serif;background:var(--paper);color:var(--ink);line-height:1.85}
+a{color:inherit}
+button,input{font:inherit}
+header{position:relative;overflow:hidden;color:white;padding:22px max(5%,calc((100% - 1180px)/2));background:linear-gradient(120deg,#052e50 0%,#075d88 55%,#079bb5 100%)}
+header:before,header:after{content:"";position:absolute;border:1px solid #ffffff20;border-radius:50%;pointer-events:none}
+header:before{width:340px;height:340px;left:-100px;top:-230px}
+header:after{width:230px;height:230px;left:120px;bottom:-190px}
+.top{position:relative;z-index:1;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+.logo{font-size:clamp(21px,3vw,29px);font-weight:900;letter-spacing:-.5px}
+.tagline{color:#d9f4ff;font-weight:500}
+header p{position:relative;z-index:1;margin:10px 0 0;color:#e1f5ff}
+nav{position:sticky;top:0;z-index:10;background:#ffffffed;backdrop-filter:blur(14px);padding:13px max(5%,calc((100% - 1180px)/2));display:flex;gap:10px 26px;align-items:center;flex-wrap:wrap;box-shadow:0 4px 18px #12364b0d;border-bottom:1px solid #e9f1f5}
+nav a{text-decoration:none;color:#24536e;font-weight:700;font-size:14px;transition:color .2s,transform .2s}
+nav a:hover{color:var(--blue);transform:translateY(-2px)}
+.hero{position:relative;isolation:isolate;overflow:hidden;width:min(1180px,90%);margin:30px auto;padding:clamp(32px,6vw,70px);border-radius:28px;background:linear-gradient(115deg,#087eae,#11a9ba 70%,#35c5c7);color:white;box-shadow:0 20px 45px #087eae30}
+.hero:after{content:"💧";position:absolute;z-index:-1;left:5%;top:5%;font-size:clamp(100px,20vw,230px);opacity:.12;transform:rotate(-15deg)}
+.hero h1{max-width:720px;font-size:clamp(25px,4vw,42px);line-height:1.5;margin:0 0 12px;font-weight:900}
+.hero p{max-width:690px;line-height:2.2;color:#e8fbff;margin:0 0 24px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--gold);color:#17344b;padding:12px 23px;border-radius:12px;text-decoration:none;font-weight:800;border:0;cursor:pointer;box-shadow:0 7px 18px #062e4b22;transition:transform .22s,box-shadow .22s,filter .22s}
+.btn:hover{transform:translateY(-3px);box-shadow:0 12px 24px #062e4b35;filter:saturate(1.08)}
+.container{width:min(1180px,90%);margin:48px auto}
+.section-head{display:flex;align-items:end;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:16px}
+h2{color:var(--navy);font-size:clamp(21px,3vw,29px);margin:0;font-weight:900}
+.section-note{color:var(--muted);font-size:14px;margin:4px 0 0}
+.search{width:100%;padding:14px 17px;border:1px solid #d7e5ed;background:white;border-radius:13px;font-size:15px;margin:10px 0 22px;outline:none;transition:border .2s,box-shadow .2s}
+.search:focus{border-color:var(--blue);box-shadow:0 0 0 4px #087eae18}
+.products{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr));gap:20px}
+.product{background:white;padding:21px;border:1px solid #edf3f6;border-radius:20px;box-shadow:0 5px 22px #153d5509;text-align:center;transition:transform .25s,box-shadow .25s,border-color .25s}
+.product:hover{transform:translateY(-7px);box-shadow:var(--shadow);border-color:#d4eaf3}
+.pic{display:grid;place-items:center;min-height:145px;font-size:65px;background:linear-gradient(145deg,#eaf8fc,#f5fcff);border-radius:15px;margin-bottom:15px}
+.product h3{color:#07547c;font-size:18px;margin:8px 0}
+.product p{color:var(--muted);font-size:14px;margin:7px 0}
+.price{font-weight:900;color:var(--green)!important;font-size:16px!important}
+.product button{background:var(--blue);color:white;border:0;padding:11px 16px;border-radius:10px;cursor:pointer;font-weight:700;transition:background .2s,transform .2s}
+.product button:hover{background:var(--navy);transform:translateY(-2px)}
+.empty{grid-column:1/-1;text-align:center;padding:25px;color:var(--muted);background:white;border-radius:15px}
+.info{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+.info div{background:white;padding:23px;border:1px solid #edf3f6;border-radius:17px;line-height:2;box-shadow:0 5px 20px #153d5508;transition:transform .22s}
+.info div:hover{transform:translateY(-5px)}
+.info b{color:var(--navy)}
+#cartDetails{display:none;background:white;padding:22px;border:1px solid var(--line);border-radius:17px;margin-top:20px;box-shadow:var(--shadow)}
+#cartDetails h3{margin-top:0;color:var(--navy)}
+#cartItems{padding-right:22px;color:var(--muted)}
+.cart-actions{display:flex;gap:10px;flex-wrap:wrap}
+.secondary{background:#eaf3f7;color:var(--navy);box-shadow:none}
+.contact{background:linear-gradient(120deg,#e7f7fc,#f4fbfd);padding:clamp(22px,4vw,38px);border:1px solid #d8eef5;border-radius:22px;line-height:2}
+.contact p{color:#496779}
+.contact .btn{margin:5px 4px 0 0}
+footer{text-align:center;background:#052f50;color:#e5f5fc;padding:28px 18px;margin-top:55px;line-height:2}
+footer strong{font-size:20px;color:white}
+.cart{position:fixed;bottom:18px;left:18px;z-index:20;background:var(--blue);color:white;border-radius:50px;padding:13px 20px;box-shadow:0 8px 24px #0003;cursor:pointer;border:0;font-weight:800;transition:transform .2s,background .2s}
+.cart:hover{background:var(--navy);transform:translateY(-3px)}
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .65s ease,transform .65s ease}
+.reveal.visible{opacity:1;transform:none}
+.toast{position:fixed;right:50%;bottom:24px;transform:translate(50%,20px);opacity:0;pointer-events:none;background:#123d56;color:white;padding:11px 18px;border-radius:12px;box-shadow:var(--shadow);z-index:30;transition:.25s}
+.toast.show{opacity:1;transform:translate(50%,0)}
+@media(max-width:600px){nav{gap:8px 17px;padding-top:11px;padding-bottom:11px}.hero{width:92%;margin:20px auto;border-radius:21px}.container{width:92%;margin:38px auto}.product{padding:17px}.cart{bottom:12px;left:12px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation-duration:.01ms!important;transition-duration:.01ms!important}.reveal{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<header>
+  <div class="top"><div class="logo">💧 تصفیه آب سادات</div><div class="tagline">کیفیت آب، سلامت خانواده</div></div>
+  <p>فروش دستگاه تصفیه آب، فیلتر و قطعات یدکی همراه با خدمات تعمیرات در منزل</p>
+</header>
+<nav aria-label="ناوبری اصلی">
+  <a href="#">صفحه اصلی</a><a href="#products">محصولات</a><a href="#services">خدمات ما</a><a href="#contact">تماس با ما</a>
+</nav>
+<main>
+<section class="hero reveal">
+  <h1>آب سالم، انتخابی مطمئن برای خانواده شما</h1>
+  <p>خرید انواع دستگاه تصفیه آب خانگی، فیلترهای باکیفیت و قطعات یدکی با امکان ثبت سفارش و دریافت خدمات تعمیرات در منزل.</p>
+  <a class="btn" href="#products">مشاهده محصولات <span aria-hidden="true">←</span></a>
+</section>
+<section class="container reveal" id="products">
+  <div class="section-head"><div><h2>🛍️ محصولات فروشگاه</h2><p class="section-note">محصول موردنظرتان را جست‌وجو و به سبد خرید اضافه کنید.</p></div></div>
+  <input class="search" id="search" type="search" placeholder="جست‌وجوی محصول..." aria-label="جست‌وجوی محصول">
+  <div class="products" id="productList">
+    <article class="product" data-name="دستگاه تصفیه آب خانگی"><div class="pic" aria-hidden="true">🚰</div><h3>دستگاه تصفیه آب خانگی</h3><p>مناسب استفاده روزانه خانواده</p><p class="price">استعلام قیمت</p><button type="button" data-add="دستگاه تصفیه آب خانگی">افزودن به سبد خرید</button></article>
+    <article class="product" data-name="فیلتر تصفیه آب"><div class="pic" aria-hidden="true">💧</div><h3>فیلتر تصفیه آب</h3><p>انواع فیلترهای دستگاه تصفیه آب</p><p class="price">استعلام قیمت</p><button type="button" data-add="فیلتر تصفیه آب">افزودن به سبد خرید</button></article>
+    <article class="product" data-name="مخزن تصفیه آب"><div class="pic" aria-hidden="true">🛢️</div><h3>مخزن تصفیه آب</h3><p>انواع مخزن دستگاه تصفیه آب</p><p class="price">استعلام قیمت</p><button type="button" data-add="مخزن تصفیه آب">افزودن به سبد خرید</button></article>
+    <article class="product" data-name="قطعات یدکی"><div class="pic" aria-hidden="true">⚙️</div><h3>قطعات یدکی</h3><p>قطعات و لوازم جانبی دستگاه</p><p class="price">استعلام قیمت</p><button type="button" data-add="قطعات یدکی">افزودن به سبد خرید</button></article>
+  </div>
+  <div id="cartDetails" aria-live="polite"><h3>🛒 سبد خرید شما</h3><ul id="cartItems"></ul><div class="cart-actions"><button class="btn" id="orderButton" type="button">ثبت سفارش در واتساپ</button><button class="btn secondary" id="clearButton" type="button">خالی کردن سبد</button></div></div>
+</section>
+<section class="container reveal" id="services">
+  <div class="section-head"><div><h2>خدمات ما</h2><p class="section-note">برای نگهداری بهتر دستگاه تصفیه آب در کنار شما هستیم.</p></div></div>
+  <div class="info"><div>🔧 <b>تعمیرات در منزل</b><br>ارائه خدمات تعمیر دستگاه تصفیه آب</div><div>💧 <b>تعویض فیلتر</b><br>سرویس و تعویض فیلترهای دستگاه</div><div>📦 <b>فروش قطعات</b><br>تأمین قطعات و لوازم جانبی</div></div>
+</section>
+<section class="container reveal" id="contact">
+  <div class="contact"><h2>📞 ارتباط با تصفیه آب سادات</h2><p>برای اطلاع از قیمت محصولات، ثبت سفارش و دریافت راهنمایی با ما تماس بگیرید.</p><p><strong>شماره تماس: 09192956318</strong></p><a class="btn" href="tel:09192956318">تماس تلفنی</a><a class="btn" href="https://wa.me/989192956318" target="_blank" rel="noopener noreferrer">واتساپ</a></div>
+</section>
+</main>
+<footer><strong>تصفیه آب سادات</strong><p>همراه شما برای داشتن آبی سالم و گوارا 💧</p><small>تمام حقوق محفوظ است.</small></footer>
+<button class="cart" id="cartToggle" type="button" aria-expanded="false" aria-controls="cartDetails">🛒 سبد خرید (<span id="count">0</span>)</button>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script>
+"use strict";
+const PHONE = "989192956318";
+const cart = [];
+const $ = (selector) => document.querySelector(selector);
+const count = $("#count"), details = $("#cartDetails"), items = $("#cartItems"), toggle = $("#cartToggle"), toast = $("#toast");
+let toastTimer;
+function notify(message){
+  toast.textContent = message;
+  toast.classList.add("show");
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => toast.classList.remove("show"), 2200);
+}
+function renderCart(){
+  count.textContent = String(cart.length);
+  items.replaceChildren();
+  cart.forEach(name => { const li=document.createElement("li"); li.textContent=name; items.appendChild(li); });
+}
+document.querySelectorAll("[data-add]").forEach(button => button.addEventListener("click", () => {
+  cart.push(button.dataset.add);
+  renderCart();
+  notify("محصول به سبد خرید اضافه شد.");
+}));
+toggle.addEventListener("click", () => {
+  const opening = details.style.display !== "block";
+  details.style.display = opening ? "block" : "none";
+  toggle.setAttribute("aria-expanded", String(opening));
+  if(opening) details.scrollIntoView({behavior:"smooth",block:"nearest"});
+});
+$("#clearButton").addEventListener("click", () => {
+  cart.length = 0; renderCart(); notify("سبد خرید خالی شد.");
+});
+$("#orderButton").addEventListener("click", () => {
+  if(!cart.length){notify("سبد خرید شما خالی است.");return;}
+  const message = "سلام، برای سفارش این محصولات راهنمایی می‌خواهم:\n" + cart.join("\n");
+  window.open("https://wa.me/" + PHONE + "?text=" + encodeURIComponent(message), "_blank", "noopener,noreferrer");
+});
+$("#search").addEventListener("input", event => {
+  const query = event.target.value.trim().toLocaleLowerCase("fa");
+  let visible = 0;
+  document.querySelectorAll(".product").forEach(product => {
+    const match = product.dataset.name.toLocaleLowerCase("fa").includes(query);
+    product.hidden = !match;
+    if(match) visible++;
+  });
+  let empty = $("#noResults");
+  if(!visible){
+    if(!empty){empty=document.createElement("p");empty.id="noResults";empty.className="empty";empty.textContent="محصولی با این نام پیدا نشد.";$("#productList").appendChild(empty);}
+  }else if(empty) empty.remove();
+});
+const observer = ("IntersectionObserver" in window) ? new IntersectionObserver(entries => {
+  entries.forEach(entry => { if(entry.isIntersecting){entry.target.classList.add("visible");observer.unobserve(entry.target);} });
+},{threshold:.12}) : null;
+document.querySelectorAll(".reveal").forEach(el => observer ? observer.observe(el) : el.classList.add("visible"));
+</script>
+</body>
+</html>
